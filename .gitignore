@@ -1,0 +1,7 @@
+*.Rproj.user
+*.Rhistory
+*.RData
+TestProgram
+plots
+IBCF_images
+Data
