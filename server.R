@@ -5,7 +5,8 @@ source("AddVisualFunc.R")
 source("cf_algorithm.R")
 source("CosineSimilarity.R")
 library(shiny)
-
+library(grid)
+library(gridExtra)
 shinyServer(function(input, output) {
     observeEvent(input$sub,{
             cread_books <- isolate(
@@ -37,6 +38,7 @@ shinyServer(function(input, output) {
                 filename <- filename[file.exists(filename)]
                 jpg = lapply(filename, readJPEG)
                 asGrobs = lapply(jpg, rasterGrob)
+                library(gridExtra)
                 p <- grid.arrange(grobs=asGrobs, nrow = 1)
             }, width = 1000)
         }

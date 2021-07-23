@@ -3,6 +3,7 @@
 # For this, there are different formulas: cosine similarity, Pearson’s correlation
 # coefficient..Here I have used the cosine similarity.
 
+library(dplyr)
 source("CosineSimilarity.R")
 
 item_recommendation <- function(book_id,rating_matrix = user_item,n_recommdation = 5){

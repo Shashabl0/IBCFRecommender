@@ -22,10 +22,11 @@ Visualise_recom <- function(recomendatiton,recommended_book,image,n_book = 3){
   }
   par(mfrow=c(div,num*3))
   
+  main_dir = getwd()
   dir = "IBCF_images"
   
-  if(!file.exists(dir))
-    dir.create(dir)
+  if(!file.exists(file.path(main_dir,dir)))
+    dir.create(file.path(main_dir,dir),showWarnings = FALSE)
   
   for(i in 1:n_book){
     img = pull(recomendatiton[i,which(colnames(recomendatiton) == image)])
