@@ -1,4 +1,4 @@
-books_list <- readRDS(file = "book_list.rds")
+books_list <- readRDS(file = "RDS/book_list.rds")
 
 library(shiny)
 # Define UI for application that draws a histogram
