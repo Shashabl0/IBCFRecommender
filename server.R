@@ -6,7 +6,7 @@ source("cf_algorithm.R")
 source("CosineSimilarity.R")
 library(shiny)
 library(dplyr)
-library(imager)
+#library(imager)
 library(grid)
 library(gridExtra)
 shinyServer(function(input, output) {
