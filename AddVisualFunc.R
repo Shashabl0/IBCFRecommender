@@ -3,7 +3,7 @@ library(imager)
 
 download <- function(name,img){
   #downloading file
-  download.file(as.character(img),destfile = name,mode = "wb")
+  download.file(as.character(img),destfile = name,mode = "wb",quiet = TRUE)
   }
 
 
