@@ -5,10 +5,7 @@ source("AddVisualFunc.R")
 source("cf_algorithm.R")
 source("CosineSimilarity.R")
 library(shiny)
-library(dplyr)
-#library(imager)
-library(grid)
-library(gridExtra)
+
 shinyServer(function(input, output) {
     observeEvent(input$sub,{
             cread_books <- isolate(
