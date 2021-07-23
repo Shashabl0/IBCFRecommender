@@ -2,11 +2,19 @@
 # install packages necessary for UI and server
 #
 
-_packages_req <- c("tidyverse","imager","grid","gridExtra")
 
-installing_packages <- function(p){
-    if( p %in% rowname(installed_packages())==FALSE)
-        install.packages(p)
+# init.R
+#
+# Example R code to install packages if not already installed
+#
+
+my_packages <- c("tidyverse","imager","grid","gridExtra")
+
+
+install_if_missing = function(p) {
+  if (p %in% rownames(installed.packages()) == FALSE) {
+    install.packages(p)
+  }
 }
 
-invisible(sapply(_packages_req,installing_packages))
+invisible(sapply(my_packages, install_if_missing))
