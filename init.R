@@ -8,7 +8,7 @@
 # Example R code to install packages if not already installed
 #
 
-my_packages <- c("dplyr","grid","gridExtra")
+my_packages <- c("dplyr","grid","gridExtra","jpeg")
 
 
 install_if_missing = function(p) {
