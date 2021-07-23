@@ -38,10 +38,13 @@ Visualise_recom <- function(recomendatiton,recommended_book,image,n_book = 3){
 }
 
 downloadimg <- function(recomendatiton,recommended_book,image,n_book){
+  main_dir = getwd()
   dir = "IBCF_images"
-  if(file.exists(dir))
-      unlink(dir,recursive = TRUE)
-  dir.create(dir)
+  
+  if(!file.exists(file.path(main_dir,dir)))
+      unlink(file.path(main_dir,dir),recursive = TRUE)
+  
+  dir.create(file.path(main_dir,dir),showWarnings = FALSE)
   
   for(i in 1:n_book){
     img = pull(recomendatiton[i,which(colnames(recomendatiton) == image)])
