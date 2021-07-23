@@ -1,6 +1,6 @@
 past_item_list <- readRDS("RDS/item_list.rds")
 item_list <- as.data.frame(readRDS("RDS/master_book_list.rds"))
-books1 <- as.data.frame(read.csv("RDS/books1.csv"))
+books1 <- as.data.frame(read.csv("books1.csv"))
 source("AddVisualFunc.R")
 source("cf_algorithm.R")
 source("CosineSimilarity.R")
@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
                          ))
             )
             
-            recom_cf_item = item_recommendation(sample(cread_books,1))
+            recom_cf_item = item_recommendation(sample(cread_books,1),past_item_list)
             recom_cf_item = recom_cf_item %>% left_join(books1, by = c("ISBN" = "ISBN")) 
             ##-----------------##
             nrecom <- input$count

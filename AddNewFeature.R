@@ -12,3 +12,4 @@ books$category = as.factor(books$category)
 # Optional : removing category var
 summary(books)
 
+
