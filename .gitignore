@@ -1,9 +1,13 @@
+# user history
 *.Rproj.user
 *.Rhistory
 *.RData
+
+# testing programs, Plots, Images folder, csv files
 TestProgram
 plots
 IBCF_images
 Data
-.Rproj.user
+
+# rsconnect of Shiny
 rsconnect
